@@ -23,6 +23,7 @@ console.log("Is " + parolaUtente + " a palindrome? " + isPalindrome(parolaUtente
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
+console.log("********************************************");
 
 /*
 Pari e Dispari
