@@ -49,15 +49,34 @@ function binarySearch(array, target) {
 
 var example = [2, 5, 6, 8, 9, 12, 14, 15, 16, 23, 28, 32, 35, 38, 39, 42, 45, 47, 48, 50, 61, 64, 69, 75];
 
-console.log(binarySearch(example, 16));
+console.log(binarySearch(example, 38));
 
 console.log('....................................................');
 
 // BUBBLE SORT ALGORITHM
 /*
-- 
+- serve a ordinare in modo crescente gli elementi in un array
+- si basa sul confronto sequenziale tra coppie di elementi contigui
+- se un elemento a sinistra è maggiore del successivo vengono scambiati gli indici
+- si può applicare anche all'ordinamento di stringhe (vedi ordinamento lista cognomi)
 */
 
+function bubbleSort(array) {
+  for (var j = array.length - 1; j > 0; j--) {
+    for (var i = 0; i < j; i++) {
+      if (array[i] > array[i + 1]) { // se un elemento è maggiore del suo successivo
+        var temp = array[i]; // creo una variabile temporanea a cui assegno l'indice dell'elemento con indice maggiore, ecc.
+        array[i] = array[i + 1];
+        array[i + 1] = temp;
+      }
+    }
+  }
+  return array;
+}
+
+var example2 = [32, 45, 6, 78, 12, 21, 3, 34, 90, 123, 435, 31, 1, 57, 42];
+
+console.log(bubbleSort(example2));
 
 
 
